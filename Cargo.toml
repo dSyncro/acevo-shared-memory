@@ -18,6 +18,9 @@ serde_arrays = { version = "0.2", optional = true }
 strum = { version = "0.28", features = ["derive"] }
 win-shared-memory = "0.1"
 
+[dev-dependencies]
+ratatui = "0.30"
+
 [build-dependencies]
 bindgen = "0.72"
 
