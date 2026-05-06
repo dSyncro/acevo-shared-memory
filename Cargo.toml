@@ -1,6 +1,6 @@
 [package]
 name = "acevo-shared-memory"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2024"
 authors = ["Domenico Mancini"]
 repository = "https://github.com/dSyncro/acevo-shared-memory"
@@ -17,6 +17,9 @@ serde = { version = "1", features = ["derive"], optional = true }
 serde_arrays = { version = "0.2", optional = true }
 strum = { version = "0.28", features = ["derive"] }
 win-shared-memory = "0.1"
+
+[dev-dependencies]
+ratatui = "0.30"
 
 [build-dependencies]
 bindgen = "0.72"

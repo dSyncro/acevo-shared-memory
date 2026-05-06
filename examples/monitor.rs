@@ -107,14 +107,14 @@ fn print_dashboard(mapper: &ACEvoSharedMemoryMapper) {
     println!("--- Aids ----------------------------------------------------");
     println!(
         "  TC : {}  |  ABS : {}  |  DRS : {}  |  Pit limiter : {}",
-        flag_indicator(physics.tc_in_action()),
-        flag_indicator(physics.abs_in_action()),
-        flag_indicator(physics.drs_enabled()),
-        flag_indicator(physics.pit_limiter_on()),
+        flag_indicator(physics.is_tc_in_action()),
+        flag_indicator(physics.is_abs_in_action()),
+        flag_indicator(physics.is_drs_enabled()),
+        flag_indicator(physics.is_pit_limiter_on()),
     );
     println!(
         "  Ignition : {}  |  Engine : {}  |  AI : {}",
-        flag_indicator(physics.ignition_on()),
+        flag_indicator(physics.is_ignition_on()),
         flag_indicator(physics.is_engine_running()),
         flag_indicator(physics.is_ai_controlled()),
     );

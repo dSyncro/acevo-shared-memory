@@ -96,12 +96,14 @@ impl<'a> GraphicsView<'a> {
     /// }
     /// ```
     pub fn flag(&self) -> ACEvoFlagType {
-        ACEvoFlagType::from(self.inner().flag)
+        let flag = self.inner().flag;
+        ACEvoFlagType::from(flag)
     }
 
     /// Returns the flag shown to all drivers on track.
     pub fn global_flag(&self) -> ACEvoFlagType {
-        ACEvoFlagType::from(self.inner().global_flag)
+        let global_flag = self.inner().global_flag;
+        ACEvoFlagType::from(global_flag)
     }
 
     /// Returns the in-game time of day as `(hours, minutes, seconds)`.
@@ -126,7 +128,8 @@ impl<'a> GraphicsView<'a> {
     /// }
     /// ```
     pub fn engine_type(&self) -> ACEvoEngineType {
-        ACEvoEngineType::from(self.inner().engine_type)
+        let engine_type = self.inner().engine_type;
+        ACEvoEngineType::from(engine_type)
     }
 
     /// Returns the display name of the active vehicle performance / power mode.

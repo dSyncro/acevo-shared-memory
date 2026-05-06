@@ -857,6 +857,9 @@ namespace ks {
 		float max_turbo_boost = 0;
 		/** Car is restricted to a single tyre compound for both axles */
 		bool use_single_compound = false;
+
+		/** Car UID mapping for indexing car_coordinates */
+		uint64_t car_ids[60][2];
 	};
 
 	/** Static session metadata. Written once when a session loads and does not change while driving. */
