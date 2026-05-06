@@ -9,3 +9,13 @@ pub fn parse_c_str(buf: &[i8]) -> &str {
     let end = bytes.iter().position(|&b| b == 0).unwrap_or(buf.len());
     std::str::from_utf8(&bytes[..end]).unwrap_or("")
 }
+
+/// Check if two `f32` are approximately equal (based on `f32::EPSILON`).
+pub fn is_approx_equal(a: f32, b: f32) -> bool {
+    (a - b).abs() < f32::EPSILON
+}
+
+/// Check if an `f32` is approximately equal to zero.
+pub fn is_approx_zero(a: f32) -> bool {
+    is_approx_equal(a, 0f32)
+}

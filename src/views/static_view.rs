@@ -61,7 +61,8 @@ impl<'a> StaticView<'a> {
     /// }
     /// ```
     pub fn session(&self) -> ACEvoSessionType {
-        ACEvoSessionType::from(self.inner().session)
+        let session = self.inner().session;
+        ACEvoSessionType::from(session)
     }
 
     /// Returns the human-readable session name (e.g. `"Race 1"`).
@@ -82,7 +83,8 @@ impl<'a> StaticView<'a> {
     /// }
     /// ```
     pub fn starting_grip(&self) -> ACEvoStartingGrip {
-        ACEvoStartingGrip::from(self.inner().starting_grip)
+        let grip = self.inner().starting_grip;
+        ACEvoStartingGrip::from(grip)
     }
 
     /// Returns the track identifier or name.
